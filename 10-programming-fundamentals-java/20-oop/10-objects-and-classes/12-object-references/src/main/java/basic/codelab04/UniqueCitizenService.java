@@ -11,7 +11,6 @@ package basic.codelab04;
 public class UniqueCitizenService {
 
     public static void main(String[] args) {
-        thinkBeforeYouRunThisExercise();
 
         Citizen citizenA = new Citizen("XZ-123-587", "Jimmy", "Jimmens");
         Citizen citizenB = new Citizen("XZ-123-587", "Jimmy", "Jimmens");
@@ -22,9 +21,9 @@ public class UniqueCitizenService {
         boolean isEqualBC = citizenB.equals(citizenC);
         boolean isEqualCD = citizenC.equals(citizenD);
 
-        System.out.println(isEqualAB); // will the output be true or false? Why?
-        System.out.println(isEqualBC); // will the output be true or false? Why?
-        System.out.println(isEqualCD); // will the output be true or false? Why?
+        System.out.println(isEqualAB); // will the output be true or false? Why? True
+        System.out.println(isEqualBC); // will the output be true or false? Why? False, different social
+        System.out.println(isEqualCD); // will the output be true or false? Why? True, only social is checked
     }
 
     private static void thinkBeforeYouRunThisExercise() {

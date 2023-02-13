@@ -12,5 +12,16 @@ package basic.codelab03;
  */
 public class DogEqualityApp {
 
+    public static void main(String[] args) {
+
+        Dog dog1 = new Dog("Lizzy", (short) 2020);
+        Dog dog2 = new Dog("Lizzy", (short) 2020);
+
+        System.out.println(dog1 == dog2);
+
+        System.out.println(dog1.equals(dog2));
+    }
+
+
 
 }

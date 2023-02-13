@@ -38,13 +38,14 @@ public class BoxRunner {
     }
 
     public static void main(String[] args) {
-        thinkBeforeYouRunThisExercise();
 
         Rectangle box1 = new Rectangle(2, 4, 8, 10);
+        System.out.println(box1);
         Point p1 = findCenter(box1);
         System.out.println(p1);
 
-        box1.grow(1, 1);
+        box1.grow(100, 150);
+        System.out.println(box1);
         Point p2 = findCenter(box1);
         System.out.println(p2);
     }

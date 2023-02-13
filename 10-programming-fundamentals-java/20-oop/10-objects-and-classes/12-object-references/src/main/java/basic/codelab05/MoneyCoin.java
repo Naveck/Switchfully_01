@@ -1,5 +1,7 @@
 package basic.codelab05;
 
+import java.util.Objects;
+
 /**
  * Override and implement the equals method so that the output - provided by the main method - matches the following:
  *      Should be TRUE: true
@@ -21,6 +23,20 @@ public class MoneyCoin {
         this.value = value;
         this.currency = currency;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MoneyCoin moneyCoin)) return false;
+        return value == moneyCoin.value && Objects.equals(currency.toLowerCase(), moneyCoin.currency.toLowerCase());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value, currency);
+    }
+
+
 
     // override and implement the equals method here...
 

@@ -1,5 +1,7 @@
 package advanced.codelab02;
 
+import java.awt.*;
+
 public class HouseApplication {
 
     /**
@@ -38,6 +40,33 @@ public class HouseApplication {
      */
     public static void main(String[] args) {
         // Start programming here!
+
+        BigWindow myWindow = new BigWindow(1000,450);
+
+        BigCanvas myCanvas = new BigCanvas();
+
+        BigCircle sun = new BigCircle(825,25,150, Color.yellow);
+
+        BigSquare redSquare = new BigSquare(0,375,Color.red);
+        BigSquare yellowSquare = new BigSquare(475,375,Color.yellow);
+        BigSquare blueSquare = new BigSquare(950, 375, Color.blue);
+
+        BigTriangle redTriangle = new BigTriangle(0,375,Color.red);
+        BigTriangle blackTriangle = new BigTriangle(475,375,Color.black);
+        BigTriangle blueTriangle = new BigTriangle(950,375, Color.blue);
+
+        myCanvas.addShape(sun);
+        myCanvas.addShape(redSquare);
+        myCanvas.addShape(yellowSquare);
+        myCanvas.addShape(blueSquare);
+        myCanvas.addShape(redTriangle);
+        myCanvas.addShape(blackTriangle);
+        myCanvas.addShape(blueTriangle);
+
+        myWindow.addComponent(myCanvas);
+
+        myWindow.launch();
+
     }
 
 }

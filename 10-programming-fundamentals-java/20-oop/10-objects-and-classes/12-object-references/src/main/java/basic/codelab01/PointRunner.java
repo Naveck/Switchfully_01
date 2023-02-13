@@ -14,7 +14,7 @@ public class PointRunner {
      *          - To execute the code, turn the code on line 17 into a comment (or simply remove it)
      */
     public static void main(String[] args) {
-        thinkBeforeYouRunThisExercise();
+
 
         Point pointAlpha = new Point(99,45);
         Point pointBeta = pointAlpha;
