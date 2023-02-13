@@ -17,5 +17,12 @@ public class AlarmRunner {
 
     public static void main(String[] args) {
 
+        Alarm myAlarm = new Alarm();
+
+        myAlarm.makeTringSound();
+        myAlarm.makeBleepSound();
+        myAlarm.makeInappropriateSound();
+        myAlarm.makePiepSound();
+
     }
 }
