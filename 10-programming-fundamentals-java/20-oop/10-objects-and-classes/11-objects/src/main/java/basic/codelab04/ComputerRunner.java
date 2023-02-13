@@ -20,5 +20,21 @@ public class ComputerRunner {
 
     public static void main(String[] args) {
 
+        Computer generic = new Computer();
+        Computer sony = new Computer("Sony");
+        Computer priceOnly = new Computer(88800);
+        Computer apple = new Computer("Apple",159500);
+
+        System.out.println(generic);
+        System.out.println(sony);
+        System.out.println(priceOnly);
+        System.out.println(apple);
+
+        Computer computers[] = {generic,sony,priceOnly,apple};
+
+        for(Computer computer : computers){
+            System.out.println(computer);
+        }
+
     }
 }

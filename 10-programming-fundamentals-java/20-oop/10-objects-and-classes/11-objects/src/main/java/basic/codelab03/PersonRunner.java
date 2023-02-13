@@ -19,5 +19,19 @@ public class PersonRunner {
 
     public static void main(String[] args) {
 
+        Person myPerson = new Person();
+
+        myPerson.setName("Robert");
+        myPerson.setHeightInCm(178);
+
+        System.out.println(myPerson.askPersonAboutHimself());
+
+        Person secondPerson = new Person();
+
+        secondPerson.setName("Emma");
+        secondPerson.setHeightInCm(180);
+
+        System.out.println(secondPerson.askPersonAboutHimself());
+
     }
 }
