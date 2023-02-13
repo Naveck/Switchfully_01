@@ -1,0 +1,23 @@
+package basic;
+
+public class VTCodelab06 {
+
+    public static void main(String[] args) {
+
+        System.out.println("\n");
+        System.out.println("Assignment 6");
+        System.out.println("--------------");
+
+        // ----------------
+        // Declare and initialize a long variable
+        // Declare an int variable and initialize it with the above long variable
+        // Does it work? Write a comment on why (not)? If the code doesn't compile, put the code itself in comment
+
+        //long a = 50L;
+
+        //int b = a;
+
+        //cannot auto convert, needs to be casted with risk of loosing information;
+    }
+
+}
