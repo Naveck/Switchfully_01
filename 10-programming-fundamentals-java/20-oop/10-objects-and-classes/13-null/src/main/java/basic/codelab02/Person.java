@@ -23,6 +23,10 @@ public class Person {
         return address;
     }
 
+    public boolean hasAddress() {
+        return address != null;
+    }
+
     public String getStreet() {
         return address.getStreet();
     }

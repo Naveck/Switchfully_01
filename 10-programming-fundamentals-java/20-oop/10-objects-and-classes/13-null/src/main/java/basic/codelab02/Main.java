@@ -14,7 +14,7 @@ public class Main {
     /**
      * This code is really flaky (easily breaks), because it's not checking for nulls.
      * Can you find the 4 different null checks that are missing?
-     *
+     * <p>
      * Add guard clauses to this code so that it no longer throws NullPointerExceptions.
      */
     public static void main(String[] args) {
@@ -30,6 +30,14 @@ public class Main {
     }
 
     public static void sendLetter(Person person, String text) {
+        if(person == null){
+            System.out.println("Can not send letter. Person doesn't exist");
+            return;
+        }
+        if(!person.hasAddress()){
+            System.out.println("Can not send letter. Person doesn't have an address");
+            return;
+        }
         System.out.println("Sending letter to: " + person.getFirstName() + " " + person.getLastName());
         System.out.println();
         System.out.println("To be printed on enveloppe: ");
@@ -44,7 +52,7 @@ public class Main {
 
     public static Person getPerson(String selectedName) {
         for (Person person : persons) {
-            if (person.getFirstName().equals(selectedName) || person.getLastName().equals(selectedName)) {
+            if (person.getFirstName() != null && person.getFirstName().equals(selectedName) || person.getLastName() != null && person.getLastName().equals(selectedName)) {
                 return person;
             }
         }
